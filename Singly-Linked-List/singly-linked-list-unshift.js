@@ -61,7 +61,7 @@ class SinglyLinkedList{
             this.head = newNode;
             this.tail = newNode;
         } else {
-            newNode.next = this.head;
+            new  Node.next = this.head;
             this.head = newNode;
         }
         this.length++;
