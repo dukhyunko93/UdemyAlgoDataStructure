@@ -61,7 +61,7 @@ class SinglyLinkedList{
             this.head = newNode;
             this.tail = newNode;
         } else {
-            neNode.next = this.head;
+            newNode.next = this.head;
             this.head = newNode;
         }
         this.length++;
@@ -77,6 +77,13 @@ class SinglyLinkedList{
             i++;
         }
         return current;
+    }
+
+    set(index, val){
+        let foundNode = this.get(index);
+        if(!foundNode) return false;
+        foundNode.val = val;
+        return true
     }
 }
 
