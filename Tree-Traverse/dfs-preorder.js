@@ -83,15 +83,16 @@ class BST{
     };
 
     DFSPreOrder(){
-        let data = [];
-        let current = this.root;
-        function trasverse(node){
-            data.push(node.val)
-            if(node.left) trasverse(node.left);
-            if(node.right) trasverse(node.right);
+        let current = this.root, data = []
+        
+        function traverse(node){
+            data.push(node);
+            if(node.left) traverse(node.left);
+            if(node.right) traverse(node.right);
         }
-        trasverse(current);
-        return data;
+
+        traverse(current)
+        return data
     }
 
 }

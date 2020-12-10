@@ -71,15 +71,16 @@ class BST{
     }
 
     BFS(){
-        let node = this.root, data = [], queue = [];
-        queue.push(this.root);
+        let queue = [], data = [];
+        let current = this.root;
+        queue.push(current)
         while(queue.length){
-            node = queue.shift();
-            data.push(node.val);
-            if(node.left) queue.push(node.left);
-            if(node.right) queue.push(node.right);
+            current = queue.shift();
+            data.push(current);
+            if(current.left) queue.push(current.left);
+            if(current.right) queue.push(current.right);
         }
-        return data;
+        return data
     };
 
 }
